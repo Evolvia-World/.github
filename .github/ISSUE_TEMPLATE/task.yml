@@ -1,0 +1,110 @@
+name: Task
+description: Create a development, technical, product, art, content, or documentation task.
+title: "[TASK] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for actionable EVOLIA work.
+        Follow the central governance rules defined in product-governance/AGENTS.md.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this work required?
+      placeholder: Describe the background and reason for this task.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source of Truth
+      description: Reference the approved document, ADR, Decision Log entry, related Issue, or other authoritative source.
+      placeholder: |
+        Document:
+        Version:
+        Section:
+        ADR / Decision:
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What outcome must this task achieve?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope_in
+    attributes:
+      label: Scope IN
+      description: What is explicitly included?
+      placeholder: |
+        - Item 1
+        - Item 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope_out
+    attributes:
+      label: Scope OUT
+      description: What is explicitly excluded?
+      placeholder: |
+        - Item 1
+        - Item 2
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define observable and testable completion criteria.
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Reference blocking or related Issues, including cross-repository dependencies.
+      placeholder: |
+        Depends on:
+        Blocked by:
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks
+      description: Known technical, product, security, visual, or integration risks.
+
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation Plan
+      description: Describe how completion will be verified.
+      placeholder: |
+        Unit:
+        Integration:
+        Contract:
+        QA:
+        Visual:
+        Security:
+
+  - type: dropdown
+    id: po_required
+    attributes:
+      label: PO Decision Required
+      description: Does this task require a Product Owner decision or approval?
+      options:
+        - "No"
+        - "Yes"
+    validations:
+      required: true
