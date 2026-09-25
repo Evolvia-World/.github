@@ -1,0 +1,84 @@
+name: Bug
+description: Report incorrect or unexpected behavior.
+title: "[BUG] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Clearly describe the problem.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide deterministic reproduction steps when possible.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        Environment:
+        App / Service:
+        Version / Commit:
+        Device / OS:
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - S0 - Security or critical data loss
+        - S1 - Main flow blocked
+        - S2 - Relevant incorrect behavior
+        - S3 - Minor issue
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Add logs, screenshots, recordings, traces, or other useful evidence.
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression Test Plan
+      description: Explain how this bug should be protected from recurring.
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Related Issues / Dependencies
+      placeholder: |
+        Related:
+        Depends on:
+        Blocked by:
